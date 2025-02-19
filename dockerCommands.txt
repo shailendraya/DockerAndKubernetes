@@ -1,0 +1,62 @@
+docker pull node
+docker run node
+
+docker build .
+docker run <image>
+
+docker stop <container_name>
+
+docker ps -a
+
+docker rm <comtiner name>
+
+docker run prune
+
+docker run -p 8080:80 846b4bf382b0b499810b0b8ab0320a
+
+docker attach compassionate_sammet
+
+docker start -a compassionate_sammet
+
+docker start -a -i goofy_chaplygin
+
+docker images
+
+docker rmi imageID
+
+docker image prune
+
+docker image inspect 257e69368b63
+
+docker cp dummy/. <container_name>:/<path>
+
+p-starting-setup> docker tag goalsapp:latest 251829/goalapp:latest
+
+p-starting-setup> docker push 251829/goalapp:tagname            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
