@@ -30,18 +30,20 @@ docker image inspect 257e69368b63
 
 docker cp dummy/. <container_name>:/<path>
 
-p-starting-setup> docker tag goalsapp:latest 251829/goalapp:latest
+docker tag goalsapp:latest 251829/goalapp:latest
 
-p-starting-setup> docker push 251829/goalapp:tagname            
-
-
+docker push 251829/goalapp:tagname            
 
 
+docker run -d -p 3003:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes
+
+mes-setup> docker run -d -p <App Port>:<port from code file> --rm --name <container_name> -v <volume_name>:/<volume path> <image:tag>
 
 
+docker run -p 3003:80 -d --name feedback-app -v feedback:/app/feedback -v "D:\Practice\DockerAndKubernetes\DockerAndKubernetes\data-volumes-setup:/app" feedback-node
 
 
-
+docker run -p 3003:80 -d --name feedback-app -v feedback:/app/feedback -v "D:\Practice\DockerAndKubernetes\DockerAndKubernetes\data-volumes-setup:/app" -v /app/node_modules feedback-node
 
 
 
