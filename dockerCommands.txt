@@ -45,6 +45,8 @@ docker run -p 3003:80 -d --name feedback-app -v feedback:/app/feedback -v "D:\Pr
 
 docker run -p 3003:80 -d --name feedback-app -v feedback:/app/feedback -v "D:\Practice\DockerAndKubernetes\DockerAndKubernetes\data-volumes-setup:/app" -v /app/node_modules feedback-node
 
+p-starting-setup> docker run -p 3004:80 -d --name feedback-app -v feedback:/app/feedback -v "D:\Practice\DockerAndKubernetes\DockerAndKubernetes\data-volumes-setup:/app:ro" -v /app/node_modules - v /app/temp feedback-node:env
+
 
 
 
