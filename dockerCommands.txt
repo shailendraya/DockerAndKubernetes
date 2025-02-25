@@ -59,7 +59,13 @@ docker run --name goals-backend --rm -p 80:80 goals-node
 
 
 
+-----------------Utility Container---------------
 
+
+ontainer> docker run -it --rm node-util npm init
+
+
+ontainer> docker run -it -v D:\Practice\DockerAndKubernetes\DockerAndKubernetes\Utility-container:/app node-util npm init
 
 
 
