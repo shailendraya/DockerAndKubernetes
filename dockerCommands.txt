@@ -67,8 +67,28 @@ ontainer> docker run -it --rm node-util npm init
 
 ontainer> docker run -it -v D:\Practice\DockerAndKubernetes\DockerAndKubernetes\Utility-container:/app node-util npm init
 
+-------------------------------------KUBERNETES--------------------------
+
+minikube start
 
 
+minikube status
+
+
+PS D:\Practice\DockerAndKubernetes\DockerAndKubernetes\Utility-container> minikube dashboard
+🔌  Enabling dashboard ...
+    ▪ Using image docker.io/kubernetesui/metrics-scraper:v1.0.8
+    ▪ Using image docker.io/kubernetesui/dashboard:v2.7.0
+💡  Some dashboard features require the metrics-server addon. To enable all features please run:
+
+        minikube addons enable metrics-server
+
+
+🤔  Verifying dashboard health ...
+🚀  Launching proxy ...
+🤔  Verifying proxy health ...
+🎉  Opening http://127.0.0.1:49981/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/ in your default browser...
+ 
 
 
 
