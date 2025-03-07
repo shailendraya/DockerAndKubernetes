@@ -144,3 +144,5 @@ n-starting-setup> kubectl set image deployment/first-app kube-first-app=251829/k
 
 
 
+
+
