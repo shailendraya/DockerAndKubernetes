@@ -88,8 +88,58 @@ PS D:\Practice\DockerAndKubernetes\DockerAndKubernetes\Utility-container> miniku
 🚀  Launching proxy ...
 🤔  Verifying proxy health ...
 🎉  Opening http://127.0.0.1:49981/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/ in your default browser...
- 
 
+
+ontainer> docker tag kub-first-app 251829/kube-first-app
+
+ontainer> docker push 251829/kube-first-app
+
+n-starting-setup> kubectl create deployment first-app --image=kube-first-app
+
+n-starting-setup> kubectl gets deployment
+
+n-starting-setup> kubectl get pods
+
+n-starting-setup> minikube dashboard
+
+n-starting-setup> kubectl expose deployment first-app --type=LoadBalancer --port=8080
+
+ontainer> kubectl get pods
+----------------------------------
+
+PS D:\Practice\DockerAndKubernetes\DockerAndKubernetes\kub-action-starting-setup> kubectl get services
+NAME         TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+first-app    LoadBalancer   10.111.174.140   <pending>     8080:32440/TCP   43s
+kubernetes   ClusterIP      10.96.0.1        <none>        443/TCP          3d15h
+PS D:\Practice\DockerAndKubernetes\DockerAndKubernetes\kub-action-starting-setup> minikube service first-app
+|-----------|-----------|-------------|---------------------------|
+| NAMESPACE |   NAME    | TARGET PORT |            URL            |
+|-----------|-----------|-------------|---------------------------|
+| default   | first-app |        8080 | http://192.168.49.2:32440 |
+|-----------|-----------|-------------|---------------------------|
+🏃  Starting tunnel for service first-app.
+|-----------|-----------|-------------|------------------------|
+| NAMESPACE |   NAME    | TARGET PORT |          URL           |
+|-----------|-----------|-------------|------------------------|
+| default   | first-app |             | http://127.0.0.1:56145 |
+|-----------|-----------|-------------|------------------------|
+🎉  Opening service default/first-app in default browser...
+❗  Because you are using a Docker driver on windows, the terminal needs to be open to run it.
+
+------------------------------------
+
+ontainer> kubectl scale deployment/first-app --replicas=3
+deployment.apps/first-app scaled
+
+
+n-starting-setup> docker build -t 251829/kube-first-app:v2 .
+n-starting-setup> docker push 251829/kube-first-app:v2
+n-starting-setup> kubectl set image deployment/first-app kube-first-app=251829/kube-first-app:v2
+
+
+n-starting-setup> kubectl rollout status deployment/first-app
+
+n-starting-setup> kubectl set image deployment/first-app kube-first-app=251829/kube-first-app:v2
 
 
 
