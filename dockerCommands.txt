@@ -143,6 +143,30 @@ n-starting-setup> kubectl set image deployment/first-app kube-first-app=251829/k
 
 
 
+--------------------------------------- Kubernetes Volumes-----------
+
+volumes> docker-compose up
+docker-compose down
+
+volumes> docker build -t 251829/kube-demo-app .
+
+volumes> docker push 251829/kube-demo-app
+
+volumes> kubectl get sc
+
+volumes> kubectl get pv
+volumes> kubectl get pvc
+
+
+
+
+
+
+
+
+
+
+
 
 
 
